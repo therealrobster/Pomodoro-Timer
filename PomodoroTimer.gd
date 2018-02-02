@@ -151,6 +151,7 @@ func _on_Timer_timeout():
 		state = "stopped"
 	changeButtonStatus()
 	changeHintStatus()
+	OS.request_attention()
 	
 	
 func changeButtonStatus():
