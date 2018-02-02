@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/alarm.wav-f67c718797ed3a35519b7d42c6049d86.sample"
+
+[deps]
+
+source_file="res://alarm.wav"
+source_md5="21acd21ee3fe8545250a3ba7438f8418"
+
+dest_files=[ "res://.import/alarm.wav-f67c718797ed3a35519b7d42c6049d86.sample" ]
+dest_md5="684bbb1b99e63278f9c9939d83ef97a5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

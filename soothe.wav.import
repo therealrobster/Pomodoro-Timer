@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soothe.wav-4b629dfb853c01060c87a314de443f90.sample"
+
+[deps]
+
+source_file="res://soothe.wav"
+source_md5="b63d32d17c2feb58a71911d1f4f5d15e"
+
+dest_files=[ "res://.import/soothe.wav-4b629dfb853c01060c87a314de443f90.sample" ]
+dest_md5="9a699d072af3990a5c55adf3a429dfce"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,687 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://PomodoroTimer.gd" type="Script" id=1]
+
+[node name="PomodoroTimer" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+dropdownWork_path = NodePath("Panel/VBoxContainer/HBoxContainer4/DropDownWorkEnd")
+dropdownBreak_path = NodePath("Panel/VBoxContainer/HBoxContainer5/DropDownBreakEnd")
+
+[node name="Panel" type="Panel" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 300.0
+margin_bottom = 256.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 292.0
+margin_bottom = 153.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 285.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Grow Direction" ]
+
+[node name="LabelWorkDuration" type="Label" parent="Panel/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 92.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Work Duration"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelWorkMinutes" type="Label" parent="Panel/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 169.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.535156, 0.535156, 0.535156, 1 )
+text = "25 minutes"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
+
+[node name="HSliderWork" type="HSlider" parent="Panel/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 285.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 1.0
+max_value = 60.0
+step = 1.0
+page = 0.0
+value = 25.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 285.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 285.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Grow Direction" ]
+
+[node name="LabelWorkDuration" type="Label" parent="Panel/VBoxContainer/HBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 132.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Short Break Duration"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelBreakShortMinutes" type="Label" parent="Panel/VBoxContainer/HBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 136.0
+margin_right = 201.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.535156, 0.535156, 0.535156, 1 )
+text = "5 minutes"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
+
+[node name="HSliderBreakShort" type="HSlider" parent="Panel/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_right = 285.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 1.0
+max_value = 60.0
+step = 1.0
+page = 0.0
+value = 5.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 285.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 92.0
+margin_right = 285.0
+margin_bottom = 106.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Grow Direction" ]
+
+[node name="LabelWorkDuration" type="Label" parent="Panel/VBoxContainer/HBoxContainer3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 129.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Long Break Duration"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelBreakLongMinutes" type="Label" parent="Panel/VBoxContainer/HBoxContainer3" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_right = 206.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.535156, 0.535156, 0.535156, 1 )
+text = "10 minutes"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
+
+[node name="HSliderBreakLong" type="HSlider" parent="Panel/VBoxContainer" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 110.0
+margin_right = 285.0
+margin_bottom = 126.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 1.0
+max_value = 60.0
+step = 1.0
+page = 0.0
+value = 10.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="CheckButtonSound" type="CheckButton" parent="Panel/VBoxContainer" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 130.0
+margin_right = 285.0
+margin_bottom = 170.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Play Sounds"
+flat = true
+clip_text = true
+align = 0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 174.0
+margin_right = 285.0
+margin_bottom = 194.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 136.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Sound at end of Work"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="DropDownWorkEnd" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer4" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 140.0
+margin_right = 261.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Select Sound"
+flat = false
+align = 0
+selected = -1
+items = [  ]
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/VBoxContainer" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 198.0
+margin_right = 285.0
+margin_bottom = 218.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer5" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 139.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Sound at end of Break"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="DropDownBreakEnd" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer5" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 143.0
+margin_right = 264.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Select Sound"
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "custom_colors" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = null
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="ButtonWork" type="Button" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 87.0
+margin_top = 276.0
+margin_right = 217.0
+margin_bottom = 323.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Start Work"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="ButtonBreakShort" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 87.0
+margin_top = 327.0
+margin_right = 217.0
+margin_bottom = 374.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Start Short Break"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="ButtonBreakLong" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 87.0
+margin_top = 379.0
+margin_right = 217.0
+margin_bottom = 426.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Start Long Break"
+flat = false
+align = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2.0
+margin_top = 478.0
+margin_right = 298.0
+margin_bottom = 498.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+percent_visible = true
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="Timer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = true
+autostart = false
+_sections_unfolded = [ "Pause" ]
+
+[node name="debugLabel-State" type="Label" parent="." index="7"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 18.0
+margin_top = 305.0
+margin_right = 75.0
+margin_bottom = 319.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "state"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="debugLabel-Timer" type="Label" parent="." index="8"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 205.0
+margin_top = 304.0
+margin_right = 283.0
+margin_bottom = 318.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "time"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="LabelHint" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 449.0
+margin_right = 300.0
+margin_bottom = 463.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Adjust settings and press \"Start \"Work\""
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="value_changed" from="Panel/VBoxContainer/HSliderWork" to="." method="_on_HSliderWork_value_changed"]
+
+[connection signal="value_changed" from="Panel/VBoxContainer/HSliderBreakShort" to="." method="_on_HSliderBreakShort_value_changed"]
+
+[connection signal="value_changed" from="Panel/VBoxContainer/HSliderBreakLong" to="." method="_on_HSliderBreakLong_value_changed"]
+
+[connection signal="pressed" from="Panel/VBoxContainer/CheckButtonSound" to="." method="_on_CheckButtonSound_pressed"]
+
+[connection signal="item_selected" from="Panel/VBoxContainer/HBoxContainer4/DropDownWorkEnd" to="." method="_on_DropDownWorkEnd_item_selected"]
+
+[connection signal="item_selected" from="Panel/VBoxContainer/HBoxContainer5/DropDownBreakEnd" to="." method="_on_DropDownBreakEnd_item_selected"]
+
+[connection signal="pressed" from="ButtonWork" to="." method="_on_ButtonWork_pressed"]
+
+[connection signal="pressed" from="ButtonBreakShort" to="." method="_on_ButtonBreakShort_pressed"]
+
+[connection signal="pressed" from="ButtonBreakLong" to="." method="_on_ButtonBreakLong_pressed"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
